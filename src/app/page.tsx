@@ -27,6 +27,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import Image from "next/image";
 
 interface BudgetCategory {
   id: string;
@@ -213,16 +214,24 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4">
+    <div className="min-h-screen bg-gray-50 p-4 pb-20">
       <div className="mx-auto max-w-4xl space-y-6">
         {/* Header */}
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Budget Calculator
-          </h1>
+          <div className="flex items-center justify-center gap-2">
+            <h1 className="text-3xl font-bold text-gray-900">Budget</h1>
+            <Image
+              className="rounded-full"
+              src="/logo.avif"
+              alt="logo"
+              width={60}
+              height={60}
+            />
+            <h1 className="text-3xl font-bold text-gray-900">Calculator</h1>
+          </div>
+
           <p className="text-gray-600">
-            Allocate your monthly earnings across different categories in Thai
-            Baht
+            Plan how much you want to spend in each category.
           </p>
         </div>
 
